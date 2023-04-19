@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -16,7 +14,6 @@ class MyApp extends StatelessWidget {
       home: Lesson(),
     );
   }
-
 }
 
 class Lesson extends StatelessWidget {
@@ -29,104 +26,89 @@ class Lesson extends StatelessWidget {
       body: Center(
         child: DecoratedBox(
           decoration: BoxDecoration(
-            color: Colors.white54,
-            borderRadius: BorderRadius.circular(30)
-            ),
-            child: SizedBox(
-              height: 250,
-              width: 350,
-              child: Padding(
-                padding: const EdgeInsets.all(25),
-                child: DecoratedBox(
-                  decoration: BoxDecoration(
+              color: Colors.white54, borderRadius: BorderRadius.circular(30)),
+          child: SizedBox(
+            height: 350,
+            width: 350,
+            child: Padding(
+              padding: const EdgeInsets.all(25),
+              child: DecoratedBox(
+                decoration: BoxDecoration(
                     color: Colors.white,
-                    borderRadius: BorderRadius.circular(20)
-                  ),
-                  child: SizedBox(
-                    child: Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(top: 20, left: 30),
-                          child: Row(
-                            children: const [
-                              Icon(
-                                Icons.cloud_outlined,
-                                size: 40,
-                                ),
-                              Padding(
-                                padding: EdgeInsets.only(left: 10),
-                                child: Text(
-                                  "Storage",
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold
-                                  ),
-                                  ),
+                    borderRadius: BorderRadius.circular(20)),
+                child: SizedBox(
+                  child: Column(
+                    // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      const Padding(
+                        padding: EdgeInsets.only(right: 30, top: 23),
+                        child: Text(
+                          "Preferred language",
+                          style: TextStyle(
+                              fontSize: 25, fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 27, top: 20),
+                        child: Row(
+                          children: const [
+                            Text("English\nUnited States",
+                            style: TextStyle(
+                                fontSize: 20
                               ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(left: 95),
+                              child: Icon(Icons.edit_outlined,size: 30,),
+                            )
                             ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 27, top: 20),
+                        child: Row(
+                          children: const [
+                            Text("English\nUnited States",
+                            style: TextStyle(
+                                fontSize: 20
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(left: 95),
+                              child: Icon(Icons.edit_outlined,size: 30,),
+                            )
+                            ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 30),
+                        child: DecoratedBox(
+                          decoration: BoxDecoration(
+                            color: Colors.black,
+                            borderRadius: BorderRadius.circular(10)
+                          ),
+                          child: const SizedBox(
+                            height: 50,
+                            width: 245,
+                            child: Center(
+                              child: Text(
+                                "+ Add another language",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 17
+                                ),
+                                ),
+                            ),
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 20, bottom: 10,),
-                          child: DecoratedBox(
-                                  decoration: BoxDecoration(
-                                    color: Color(0xffEDF1FF),
-                                    borderRadius: BorderRadius.circular(50)
-                                    ),
-                                  child: SizedBox(
-                                    height: 7,
-                                    width: 245,
-                                    child: Padding(
-                                      padding: const EdgeInsets.only(right: 210),
-                                      child: DecoratedBox(
-                                        decoration: BoxDecoration(
-                                          color: Colors.black,
-                                          borderRadius: BorderRadius.circular(50)
-                                        ),
-                                        child: const SizedBox(
-                                          height: 7,
-                                          width: 24.5,
-                                        ),
-                                        ),
-                                    ),
-                                  ),
-                                ),
-                        ),
-                        const Padding(
-                          padding: EdgeInsets.only(bottom: 25, right: 138),
-                          child: Text(
-                            "384.8 MB of 30 GB used",
-                            style: TextStyle(
-                              color: Color(0xff494E76),
-                              fontSize: 10
-                            ),
-                            ),
-                        ),
-                          DecoratedBox(
-                            decoration: BoxDecoration(
-                              color: Colors.black,
-                              borderRadius: BorderRadius.circular(7)
-                            ),
-                            child: const SizedBox(
-                              height: 40,
-                              width: 245,
-                              child: Center(
-                                child: Text(
-                                  "Buy storage",
-                                  style: TextStyle(
-                                    color: Colors.white
-                                  ),
-                                )
-                                ),
-                              ),
-                            )
-                      ],
-                    ),
+                        )
+                    ],
                   ),
-                  ),
+                ),
               ),
             ),
           ),
+        ),
       ),
     );
   }
