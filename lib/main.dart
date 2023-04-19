@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,7 +27,7 @@ class Lesson extends StatelessWidget {
           decoration: BoxDecoration(
               color: Colors.white54, borderRadius: BorderRadius.circular(30)),
           child: SizedBox(
-            height: 350,
+            height: 470,
             width: 350,
             child: Padding(
               padding: const EdgeInsets.all(25),
@@ -38,70 +37,163 @@ class Lesson extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20)),
                 child: SizedBox(
                   child: Column(
-                    // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      const Padding(
-                        padding: EdgeInsets.only(right: 30, top: 23),
-                        child: Text(
-                          "Preferred language",
-                          style: TextStyle(
-                              fontSize: 25, fontWeight: FontWeight.bold),
-                        ),
-                      ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 27, top: 20),
-                        child: Row(
-                          children: const [
-                            Text("English\nUnited States",
-                            style: TextStyle(
-                                fontSize: 20
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(left: 95),
-                              child: Icon(Icons.edit_outlined,size: 30,),
-                            )
-                            ],
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 27, top: 20),
-                        child: Row(
-                          children: const [
-                            Text("English\nUnited States",
-                            style: TextStyle(
-                                fontSize: 20
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(left: 95),
-                              child: Icon(Icons.edit_outlined,size: 30,),
-                            )
-                            ],
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 30),
+                        padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
                         child: DecoratedBox(
                           decoration: BoxDecoration(
-                            color: Colors.black,
-                            borderRadius: BorderRadius.circular(10)
+                            color: Color(0xffEDF1FF),
+                            borderRadius: BorderRadius.circular(5)
                           ),
-                          child: const SizedBox(
-                            height: 50,
-                            width: 245,
-                            child: Center(
-                              child: Text(
-                                "+ Add another language",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 17
-                                ),
-                                ),
+                          child: SizedBox(
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 25, top: 5, bottom: 5),
+                              child: Row(
+                                children: const [
+                                  Icon(
+                                    Icons.home_outlined,
+                                    size: 50,
+                                    ),
+                                  Padding(
+                                    padding: EdgeInsets.only(left: 10),
+                                    child: Text(
+                                      "Overview",
+                                      style: TextStyle(
+                                        fontSize: 25
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
                             ),
                           ),
                         ),
-                        )
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                        child: DecoratedBox(
+                          decoration: BoxDecoration(
+                            color: Color(0xffEDF1FF),
+                            borderRadius: BorderRadius.circular(5)
+                          ),
+                          child: SizedBox(
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 25, top: 5, bottom: 5),
+                              child: Row(
+                                children: const [
+                                  Icon(
+                                    Icons.file_open_outlined,
+                                    size: 46,
+                                    ),
+                                  Padding(
+                                    padding: EdgeInsets.only(left: 10),
+                                    child: Text(
+                                      "My files",
+                                      style: TextStyle(
+                                        fontSize: 25
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                        child: DecoratedBox(
+                          decoration: BoxDecoration(
+                            color: Color(0xffEDF1FF),
+                            borderRadius: BorderRadius.circular(5)
+                          ),
+                          child: SizedBox(
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 25, top: 5, bottom: 5),
+                              child: Row(
+                                children: const [
+                                  Icon(
+                                    Icons.watch_later_outlined,
+                                    size: 50,
+                                    ),
+                                  Padding(
+                                    padding: EdgeInsets.only(left: 10),
+                                    child: Text(
+                                      "Recent",
+                                      style: TextStyle(
+                                        fontSize: 25
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                        child: DecoratedBox(
+                          decoration: BoxDecoration(
+                            color: Color(0xffEDF1FF),
+                            borderRadius: BorderRadius.circular(5)
+                          ),
+                          child: SizedBox(
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 25, top: 5, bottom: 5),
+                              child: Row(
+                                children: const [
+                                  Icon(
+                                    Icons.star_border_outlined,
+                                    size: 50,
+                                    ),
+                                  Padding(
+                                    padding: EdgeInsets.only(left: 10),
+                                    child: Text(
+                                      "Starred",
+                                      style: TextStyle(
+                                        fontSize: 25
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                        child: DecoratedBox(
+                          decoration: BoxDecoration(
+                            color: Color(0xffEDF1FF),
+                            borderRadius: BorderRadius.circular(5)
+                          ),
+                          child: SizedBox(
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 25, top: 5, bottom: 5),
+                              child: Row(
+                                children: const [
+                                  Icon(
+                                    Icons.restore_from_trash_outlined,
+                                    size: 50,
+                                    ),
+                                  Padding(
+                                    padding: EdgeInsets.only(left: 10),
+                                    child: Text(
+                                      "Trash",
+                                      style: TextStyle(
+                                        fontSize: 25
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),
